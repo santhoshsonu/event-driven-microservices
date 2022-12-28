@@ -1,5 +1,7 @@
 # event-driven-microservices
-Event-driven microservices architecture with patterns using Spring boot, Spring cloud, Kafka and Elasticsearch
+
+Event-driven microservices architecture with patterns using Spring boot, Spring cloud, Kafka and
+Elasticsearch
 
 The microservices pattern implemented are:
 
@@ -16,4 +18,5 @@ The microservices pattern implemented are:
 11. Database per Service
 12. Messaging between microservices using Kafka
 
-Spring Security Oauth 2.0 and OpenID connect protocols for Authentication and Authorization using Keycloak and JWT.
+Spring Security Oauth 2.0 and OpenID connect protocols for Authentication and Authorization using
+Keycloak and JWT.
