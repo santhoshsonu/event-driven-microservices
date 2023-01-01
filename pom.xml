@@ -80,6 +80,7 @@
   <modules>
     <module>twitter-to-kafka-service</module>
     <module>app-config-data</module>
+    <module>kafka</module>
   </modules>
   <name>event-driven-microservices</name>
   <packaging>pom</packaging>
