@@ -5,4 +5,10 @@ twitter-to-kafka-service:
     - Spring
     - Kafka
     - Elasticsearch
+  twitter-base-url: https://api.twitter.com/2/tweets/search/stream?tweet.fields=created_at&expansions=author_id
+  twitter-rules-base-url: https://api.twitter.com/2/tweets/search/stream/rules
   twitter-bearer-token: ${TWITTER_BEARER_TOKEN}
+  enable-mock-tweets: true
+  mock-tweet-min-length: 5
+  mock-tweet-max-length: 15
+  mock-tweet-sleep-ms: 1000

@@ -1,7 +1,6 @@
 package com.microservices.eventdriven.twitter.to.kafka.service;
 
-import com.microservices.eventdriven.twitter.to.kafka.service.runner.ITwitterKafkaStreamRunner;
-import com.microservices.eventdriven.twitter.to.kafka.service.runner.impl.TwitterKafkaStreamRunner;
+import com.microservices.eventdriven.twitter.to.kafka.service.runner.IStreamRunner;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,9 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 public class TwitterToKafkaServiceApplication implements CommandLineRunner {
 
-  private final ITwitterKafkaStreamRunner twitterKafkaStreamRunner;
+  private final IStreamRunner twitterKafkaStreamRunner;
 
-  public TwitterToKafkaServiceApplication(TwitterKafkaStreamRunner twitterKafkaStreamRunner) {
+  public TwitterToKafkaServiceApplication(IStreamRunner twitterKafkaStreamRunner) {
     this.twitterKafkaStreamRunner = twitterKafkaStreamRunner;
   }
 
