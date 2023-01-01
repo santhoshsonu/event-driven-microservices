@@ -1,4 +1,4 @@
-package com.microservices.eventdriven.twitter.to.kafka.service.config;
+package com.microservices.eventdriven.config;
 
 import java.util.List;
 import lombok.Data;

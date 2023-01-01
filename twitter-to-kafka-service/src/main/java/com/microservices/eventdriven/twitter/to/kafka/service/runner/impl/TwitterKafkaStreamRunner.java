@@ -2,7 +2,7 @@ package com.microservices.eventdriven.twitter.to.kafka.service.runner.impl;
 
 import static java.util.Objects.nonNull;
 
-import com.microservices.eventdriven.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
+import com.microservices.eventdriven.config.TwitterToKafkaServiceConfigData;
 import com.microservices.eventdriven.twitter.to.kafka.service.exception.TwitterToKafkaServiceException;
 import com.microservices.eventdriven.twitter.to.kafka.service.runner.IStreamRunner;
 import java.util.List;

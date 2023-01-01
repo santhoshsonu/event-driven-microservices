@@ -14,6 +14,11 @@
 
   <dependencies>
     <dependency>
+      <artifactId>app-config-data</artifactId>
+      <groupId>com.microservices.eventdriven</groupId>
+    </dependency>
+
+    <dependency>
       <artifactId>spring-boot-starter</artifactId>
       <groupId>org.springframework.boot</groupId>
     </dependency>

@@ -26,6 +26,12 @@
   </build>
   <dependencyManagement>
     <dependencies>
+      <!-- LOCAL -->
+      <dependency>
+        <artifactId>app-config-data</artifactId>
+        <version>${version}</version>
+        <groupId>com.microservices.eventdriven</groupId>
+      </dependency>
       <dependency>
         <artifactId>spring-boot-starter</artifactId>
         <groupId>org.springframework.boot</groupId>
@@ -73,6 +79,7 @@
   <modelVersion>4.0.0</modelVersion>
   <modules>
     <module>twitter-to-kafka-service</module>
+    <module>app-config-data</module>
   </modules>
   <name>event-driven-microservices</name>
   <packaging>pom</packaging>
