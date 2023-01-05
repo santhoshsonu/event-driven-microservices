@@ -4,10 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
     <groupId>com.microservices.eventdriven</groupId>
-    <artifactId>kafka</artifactId>
+    <artifactId>event-driven-microservices</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>kafka-producer</artifactId>
+
+  <artifactId>common-config</artifactId>
 
   <dependencies>
     <dependency>
@@ -15,26 +16,16 @@
       <artifactId>app-config-data</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.microservices.eventdriven</groupId>
-      <artifactId>common-config</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.microservices.eventdriven</groupId>
-      <artifactId>kafka-model</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
     </dependency>
     <dependency>
-      <groupId>io.confluent</groupId>
-      <artifactId>kafka-avro-serializer</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.kafka</groupId>
-      <artifactId>spring-kafka</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <scope>provided</scope>
+      <groupId>org.springframework.retry</groupId>
+      <artifactId>spring-retry</artifactId>
     </dependency>
   </dependencies>
 

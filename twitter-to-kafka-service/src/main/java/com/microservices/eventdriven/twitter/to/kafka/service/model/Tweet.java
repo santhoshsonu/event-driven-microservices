@@ -22,14 +22,14 @@ public class Tweet {
 
   @JsonProperty("created_at")
   private ZonedDateTime createdAt;
-  private String id;
+  private Long id;
   private String text;
   @Getter(AccessLevel.NONE)
   private User user;
 
   @Exclude
   @JsonProperty(value = "author_id")
-  private String authorId;
+  private Long authorId;
 
   public static Tweet fromJson(String jsonData) throws JsonProcessingException {
     return mapper.readValue(jsonData, Tweet.class);
@@ -38,11 +38,12 @@ public class Tweet {
   public User getUser() {
     return new User().setId(authorId);
   }
+
+  @Data
+  @Accessors(chain = true)
+  public static class User {
+
+    private Long id;
+  }
 }
 
-@Data
-@Accessors(chain = true)
-class User {
-
-  private String id;
-}
