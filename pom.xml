@@ -115,6 +115,22 @@
         <version>${spring-retry.version}</version>
       </dependency>
 
+      <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-server -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-config-server</artifactId>
+        <version>${spring-cloud.version}</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud-dependencies.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+
       <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
       <dependency>
         <artifactId>lombok</artifactId>
@@ -142,6 +158,7 @@
     <module>app-config-data</module>
     <module>kafka</module>
     <module>common-config</module>
+    <module>config-server</module>
   </modules>
 
   <name>event-driven-microservices</name>
@@ -163,6 +180,8 @@
     <lombok.version>1.18.24</lombok.version>
     <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
     <spring-boot.version>3.0.1</spring-boot.version>
+    <spring-cloud.version>4.0.0</spring-cloud.version>
+    <spring-cloud-dependencies.version>2022.0.0</spring-cloud-dependencies.version>
     <httpclient.version>4.5.14</httpclient.version>
     <json.version>20220924</json.version>
     <jackson-bom.version>2.14.1</jackson-bom.version>
