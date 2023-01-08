@@ -1,0 +1,3 @@
+[submodule "config-server-repo"]
+	path = config-server-repo
+	url = https://github.com/santhoshsonu/event-driven-config-server-repo.git
