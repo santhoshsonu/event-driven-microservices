@@ -8,10 +8,14 @@ spring:
           uri: https://github.com/santhoshsonu/event-driven-config-server-repo.git
           default-label: master
           username: santhoshsonu
-          password: '************'
+          password: ENC(3EIQ2JFN31I+di0SlGhXy9PlI+FYagJbVFSzvdcoq/7HxgZRd265rMi+giz8Feq6++ZsEhezIPdC7hO0gtZuvCc09e9ZjwMh6j5IinKGvNAq5ObMxloz5xzFgtNrEE4QpLtmuAVO8kqW/UigUddSdub73dja8daksXwRX91z4MM=)
           clone-on-start: true
       fail-fast: true
   security:
     user:
       name: spring_cloud_user
-      password: p@ssw0rd
+      password: ENC(nICD/HWaV0Rre4c7X+G9/6mCdo6amDAWcSnSXLR00kyQfkwKm7DLFicPe27Qt+6Y)
+
+jasypt:
+  encryptor:
+    password: ${JASYPT_SECRET_KEY}

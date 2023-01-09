@@ -137,6 +137,12 @@
         <artifactId>spring-boot-starter-security</artifactId>
         <version>${spring-boot.version}</version>
       </dependency>
+      <!-- https://mvnrepository.com/artifact/com.github.ulisesbocchio/jasypt-spring-boot-starter -->
+      <dependency>
+        <groupId>com.github.ulisesbocchio</groupId>
+        <artifactId>jasypt-spring-boot-starter</artifactId>
+        <version>${jasypt-spring-boot-starter.version}</version>
+      </dependency>
 
       <!-- Dev Tools -->
       <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
@@ -198,6 +204,7 @@
     <kafka-avro-serializer.version>7.3.1</kafka-avro-serializer.version>
     <spring-kafka.version>3.0.1</spring-kafka.version>
     <spring-retry.version>2.0.0</spring-retry.version>
+    <jasypt-spring-boot-starter.version>3.0.5</jasypt-spring-boot-starter.version>
   </properties>
 
   <version>0.0.1-SNAPSHOT</version>
