@@ -31,6 +31,7 @@
   </build>
 
   <dependencies>
+    <!-- LOCAL -->
     <dependency>
       <artifactId>app-config-data</artifactId>
       <groupId>com.microservices.eventdriven</groupId>
@@ -79,11 +80,20 @@
       <artifactId>spring-cloud-starter-bootstrap</artifactId>
     </dependency>
 
+    <!-- Security -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+
+    <!-- Dev Tools -->
     <dependency>
       <artifactId>lombok</artifactId>
       <groupId>org.projectlombok</groupId>
       <scope>provided</scope>
     </dependency>
+
+    <!-- Testing -->
     <dependency>
       <artifactId>spring-boot-starter-test</artifactId>
       <groupId>org.springframework.boot</groupId>

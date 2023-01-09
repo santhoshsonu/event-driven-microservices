@@ -115,6 +115,7 @@
         <version>${spring-retry.version}</version>
       </dependency>
 
+      <!-- Spring Cloud -->
       <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-server -->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
@@ -130,7 +131,14 @@
         <scope>import</scope>
       </dependency>
 
+      <!-- Security -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+        <version>${spring-boot.version}</version>
+      </dependency>
 
+      <!-- Dev Tools -->
       <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
       <dependency>
         <artifactId>lombok</artifactId>
@@ -139,6 +147,7 @@
         <version>${lombok.version}</version>
       </dependency>
 
+      <!-- Testing -->
       <dependency>
         <artifactId>spring-boot-starter-test</artifactId>
         <groupId>org.springframework.boot</groupId>
