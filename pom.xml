@@ -168,6 +168,7 @@
     <module>kafka</module>
     <module>common-config</module>
     <module>config-server</module>
+    <module>kafka-consumer</module>
   </modules>
 
   <name>event-driven-microservices</name>
