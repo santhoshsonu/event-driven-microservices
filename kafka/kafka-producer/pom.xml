@@ -10,6 +10,7 @@
   <artifactId>kafka-producer</artifactId>
 
   <dependencies>
+    <!-- LOCAL -->
     <dependency>
       <groupId>com.microservices.eventdriven</groupId>
       <artifactId>app-config-data</artifactId>
@@ -22,6 +23,7 @@
       <groupId>com.microservices.eventdriven</groupId>
       <artifactId>kafka-model</artifactId>
     </dependency>
+
     <dependency>
       <groupId>io.confluent</groupId>
       <artifactId>kafka-avro-serializer</artifactId>
