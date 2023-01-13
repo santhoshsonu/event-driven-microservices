@@ -14,8 +14,8 @@
   <dependencies>
     <!-- LOCAL -->
     <dependency>
-      <artifactId>app-config-data</artifactId>
       <groupId>com.microservices.eventdriven</groupId>
+      <artifactId>app-config-data</artifactId>
     </dependency>
     <dependency>
       <groupId>com.microservices.eventdriven</groupId>
