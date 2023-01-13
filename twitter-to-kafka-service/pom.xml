@@ -86,6 +86,12 @@
       <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
 
+    <!-- Health -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-actuator</artifactId>
+    </dependency>
+
     <!-- Dev Tools -->
     <dependency>
       <artifactId>lombok</artifactId>
