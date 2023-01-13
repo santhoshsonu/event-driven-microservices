@@ -17,12 +17,12 @@ public class KafkaConsumerConfigData {
   private boolean specificAvroReader;
   private boolean batchListener;
   private boolean autoStartup;
-  private int concurrencyLevel;
-  private long sessionTimeoutMs;
-  private long heartbeatIntervalMs;
-  private long maxPollIntervalMs;
-  private int maxPollRecords;
-  private long maxPartitionFetchBytesDefault;
-  private int maxPartitionFetchBytesBoostFactor;
+  private Integer concurrencyLevel;
+  private Integer sessionTimeoutMs;
+  private Integer heartbeatIntervalMs;
+  private Integer maxPollIntervalMs;
+  private Integer maxPollRecords;
+  private Integer maxPartitionFetchBytesDefault;
+  private Integer maxPartitionFetchBytesBoostFactor;
   private long pollTimeoutMs;
 }
