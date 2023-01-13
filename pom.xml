@@ -60,6 +60,11 @@
         <artifactId>kafka-producer</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.microservices.eventdriven</groupId>
+        <artifactId>kafka-consumer</artifactId>
+        <version>${project.version}</version>
+      </dependency>
 
       <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -138,6 +143,13 @@
         <version>${spring-boot.version}</version>
       </dependency>
 
+      <!-- Health -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-actuator</artifactId>
+        <version>${spring-boot.version}</version>
+      </dependency>
+
       <!-- Dev Tools -->
       <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
       <dependency>
@@ -163,12 +175,13 @@
   <groupId>com.microservices.eventdriven</groupId>
   <modelVersion>4.0.0</modelVersion>
   <modules>
-    <module>twitter-to-kafka-service</module>
     <module>app-config-data</module>
     <module>kafka</module>
     <module>common-config</module>
     <module>config-server</module>
     <module>kafka-consumer</module>
+    <module>twitter-to-kafka-service</module>
+    <module>kafka-to-elastic-service</module>
   </modules>
 
   <name>event-driven-microservices</name>
@@ -182,9 +195,9 @@
   </parent>
 
   <properties>
-    <java.version>17</java.version>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
+    <java.version>19</java.version>
+    <maven.compiler.source>19</maven.compiler.source>
+    <maven.compiler.target>19</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <lombok.version>1.18.24</lombok.version>
