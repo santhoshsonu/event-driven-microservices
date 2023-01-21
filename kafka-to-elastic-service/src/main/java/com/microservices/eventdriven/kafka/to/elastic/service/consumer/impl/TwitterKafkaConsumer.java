@@ -1,13 +1,17 @@
 package com.microservices.eventdriven.kafka.to.elastic.service.consumer.impl;
 
-import com.microservices.eventdriven.config.KafkaConsumerConfigData;
+import com.microservices.eventdriven.config.KafkaConfigData;
 import com.microservices.eventdriven.kafka.admin.client.KafkaAdminClient;
 import com.microservices.eventdriven.kafka.avro.model.TwitterAvroModel;
 import com.microservices.eventdriven.kafka.to.elastic.service.consumer.KafkaConsumer;
 import java.util.List;
+import java.util.Objects;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.context.event.ApplicationStartedEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.config.KafkaListenerEndpointRegistry;
+import org.springframework.kafka.listener.MessageListenerContainer;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -19,13 +23,28 @@ public class TwitterKafkaConsumer implements KafkaConsumer<Long, TwitterAvroMode
 
   private final KafkaListenerEndpointRegistry kafkaListenerEndpointRegistry;
   private final KafkaAdminClient kafkaAdminClient;
-  private final KafkaConsumerConfigData kafkaConsumerConfigData;
+
+  private final KafkaConfigData kafkaConfigData;
 
   public TwitterKafkaConsumer(KafkaListenerEndpointRegistry kafkaListenerEndpointRegistry,
-      KafkaAdminClient kafkaAdminClient, KafkaConsumerConfigData kafkaConsumerConfigData) {
+      KafkaAdminClient kafkaAdminClient,
+      KafkaConfigData kafkaConfigData) {
     this.kafkaListenerEndpointRegistry = kafkaListenerEndpointRegistry;
     this.kafkaAdminClient = kafkaAdminClient;
-    this.kafkaConsumerConfigData = kafkaConsumerConfigData;
+    this.kafkaConfigData = kafkaConfigData;
+  }
+
+  @EventListener
+  public void onAppStarted(ApplicationStartedEvent event) {
+    kafkaAdminClient.checkTopicsCreated();
+    log.info("Topic(s) with name(s) {} are ready for operations!",
+        kafkaConfigData.getTopicNamesToCreate());
+    MessageListenerContainer twitterTopicListener = kafkaListenerEndpointRegistry.getListenerContainer(
+        "twitterTopicListener");
+    if (Objects.nonNull(twitterTopicListener)) {
+      log.info("Starting Twitter Kafka Listener...");
+      twitterTopicListener.start();
+    }
   }
 
   @Override
