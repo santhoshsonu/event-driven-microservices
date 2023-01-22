@@ -119,6 +119,16 @@
         <artifactId>spring-retry</artifactId>
         <version>${spring-retry.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.elasticsearch</groupId>
+        <artifactId>elasticsearch</artifactId>
+        <version>${elastic.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.elasticsearch.client</groupId>
+        <artifactId>elasticsearch-rest-client</artifactId>
+        <version>${elastic.version}</version>
+      </dependency>
 
       <!-- Spring Cloud -->
       <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-server -->
@@ -182,6 +192,7 @@
     <module>kafka-consumer</module>
     <module>twitter-to-kafka-service</module>
     <module>kafka-to-elastic-service</module>
+    <module>elastic</module>
   </modules>
 
   <name>event-driven-microservices</name>
@@ -212,6 +223,7 @@
     <kafka-avro-serializer.version>7.3.1</kafka-avro-serializer.version>
     <spring-kafka.version>3.0.1</spring-kafka.version>
     <spring-retry.version>2.0.0</spring-retry.version>
+    <elastic.version>8.5.3</elastic.version>
   </properties>
 
   <version>0.0.1-SNAPSHOT</version>
