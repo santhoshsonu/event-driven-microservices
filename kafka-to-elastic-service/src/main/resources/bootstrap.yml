@@ -10,7 +10,7 @@ spring:
       uri:
         - http://localhost:8888
       username: spring_cloud_user
-      password: '{cipher}fbf60bd286b5bfbd032a4ac23dbb6c0aa23492ca26147d23690726bd66eeb9d4'
+      password: '{cipher}9b805c2abeb7002c649234d34068b96ecd03f72cc58f29482837cd6a1449e8c3'
 
 encrypt:
   key: ${JASYPT_SECRET_KEY}
